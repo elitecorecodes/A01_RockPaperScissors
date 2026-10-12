@@ -8,10 +8,14 @@ public class Rockpaperscissors {
 
         String playerA;
         String playerB;
+        String playAgain;
 
         do {
-            System.out.print("Player A - Enter R, P, or S: ");
-            playerA = in.nextLine();
+
+
+            do {
+                System.out.print("Player A - Enter R, P, or S: ");
+                 playerA = in.nextLine();
 
             if (!playerA.equalsIgnoreCase("R") &&
                     !playerA.equalsIgnoreCase("P") &&
@@ -60,6 +64,10 @@ public class Rockpaperscissors {
                 System.out.println("Rock breaks Scissors - Player B wins!");
             }
         }
+            System.out.print("Would you like to play again? (Y/N): ");
+            playAgain = in.nextLine();
+
+        } while (playAgain.equalsIgnoreCase("Y"));
 
         in.close();
 
